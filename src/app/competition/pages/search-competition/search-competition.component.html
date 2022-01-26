@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Code Challenge Truelogic
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <form id="competition-form" [formGroup]="competitionForm" (ngSubmit)="submit()" lines="full" class="ion-no-margin ion-text-center">
+        <ion-list-header lines="full">
+          <ion-label> Search Competitions </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Enter Season</ion-label>
+          <ion-input placeholder="YYYY" type="text" formControlName="year"></ion-input>
+        </ion-item>
+        <ion-button color="secondary" type="submit">search</ion-button>
+      </form>
+    </ion-row>
+    <ion-row>
+        <app-competition-list [competitionList]="competitionList"></app-competition-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>

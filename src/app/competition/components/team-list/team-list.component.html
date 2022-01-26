@@ -1,0 +1,7 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size-lg="3" size-md="4" size-sm="6" size-xs="12" *ngFor="let teamItem of teamsList; let i = index" [attr.data-index]="i">
+      <app-team-item [teamItem]="teamItem" [competitionId]="competitionId"></app-team-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,11 @@
+<ion-card>
+  <img [src]="teamItem.crestUrl" />
+  <ion-card-header>
+    <ion-card-subtitle>Destination</ion-card-subtitle>
+    <ion-card-title>{{ teamItem.venue }} | {{ teamItem.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ teamItem.address }} , founded in {{ teamItem.founded }}
+  </ion-card-content>
+  <ion-button color="tertiary" (click)="open()">See details</ion-button>
+</ion-card>

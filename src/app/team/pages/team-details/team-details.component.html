@@ -1,0 +1,19 @@
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row>
+      <ion-button shape="round" fill="outline" (click)="back()"><ion-icon name="caret-back-outline"></ion-icon> Back </ion-button>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-team-info [teamDetails]="teamData"></app-team-info>
+      </ion-col>
+      <ion-col>
+        <ion-list *ngIf="playersTeamList">
+          <app-team-player *ngFor="let player of playersTeamList; let i = index" [attr.data-index]="i"
+            [player]="player">
+          </app-team-player>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

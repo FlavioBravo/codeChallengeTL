@@ -1,0 +1,8 @@
+<ion-item *ngIf="competitionData">
+  <ion-label>
+    <h1>Competition - {{competitionData.name}} | Area: {{competitionData?.area?.name}}</h1>
+    <p>Start Date: {{competitionData?.currentSeason?.startDate | date: 'MM/dd/yyyy'}}</p>
+    <p>End Date: {{competitionData?.currentSeason?.endDate | date: 'MM/dd/yyyy'}}</p>
+  </ion-label>
+  <ion-button (click)="open()">See more...</ion-button>
+</ion-item>

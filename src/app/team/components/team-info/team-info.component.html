@@ -1,0 +1,16 @@
+<ion-card *ngIf="teamDetails" class="ion-text-center">
+  <img [src]="teamDetails.crestUrl" />
+  <ion-card-header>
+    <ion-card-subtitle>Soccer Team</ion-card-subtitle>
+    <ion-card-title>{{ teamDetails.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Address: {{ teamDetails.address }}</p>
+    <p>club Colors: {{ teamDetails.clubColors }}</p>
+    <p>founded: {{ teamDetails.founded }}</p>
+    <p>Phone: {{ teamDetails.phone }}</p>
+    <p>Email: {{ teamDetails.email }}</p>
+    <p>Stadium: {{ teamDetails.venue }}</p>
+    <p>Website: {{ teamDetails.website }}</p>
+  </ion-card-content>
+</ion-card>

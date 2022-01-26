@@ -1,0 +1,5 @@
+<ion-list>
+  <app-competition-item *ngFor="let competitionItem of competitionList; let i = index" [attr.data-index]="i" 
+    [competitionData]="competitionItem">
+  </app-competition-item>
+</ion-list>
